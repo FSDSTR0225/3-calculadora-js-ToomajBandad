@@ -1,39 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <script defer src="student.js"></script>
-    <script defer src="classManager.js"></script>
-    <script defer src="index.js"></script> -->
-    <script defer src="calculadora.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1 id="titulo">Hola a todos en clase yo soy Daniel</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Project</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <div style="color: white; margin-bottom: 1rem; font-size: larger">
+        Casio Glass Calculator
+      </div>
+      <div class="display_container">
+        <input class="display" type="text" id="display1" disabled />
+        <input class="display" type="text" id="display2" disabled />
+        <input
+          class="display"
+          type="text"
+          id="display3"
+          placeholder="0"
+          disabled
+        />
+      </div>
 
-    <div id="display">
-        <p id="primer-operando"></p>
-        <p id="operador"></p>
-        <p id="segundo-operando"></p>
+      <div class="buttons">
+        <button onclick="clearDisplayHandler()">C</button>
+        <button onclick="numberPressHandler('7')">7</button>
+        <button onclick="numberPressHandler('8')">8</button>
+        <button onclick="numberPressHandler('9')">9</button>
+        <button onclick="operatorPressHandler('/')">/</button>
+        <button onclick="numberPressHandler('4')">4</button>
+        <button onclick="numberPressHandler('5')">5</button>
+        <button onclick="numberPressHandler('6')">6</button>
+        <button onclick="operatorPressHandler('*')">*</button>
+        <button onclick="numberPressHandler('1')">1</button>
+        <button onclick="numberPressHandler('2')">2</button>
+        <button onclick="numberPressHandler('3')">3</button>
+        <button onclick="operatorPressHandler('-')">-</button>
+        <button onclick="operatorPressHandler('+')">+</button>
+        <button onclick="numberPressHandler('0')">0</button>
+        <button onclick="calculateHandler()">=</button>
+      </div>
+      <div style="margin-top: 1rem; color: white">Toomaj Bandad</div>
     </div>
 
-    <div id="lista-de-operadores">
-    </div>
-    <div id="lista-de-numeros">
-    </div>
-
-    <p id="resultado"></p>
-    <button id="boton-para-eliminar-todos">Eliminar todos</button>
-
-    <ul id="lista-de-estudiantes">
-    </ul>
-    <div class="formulario-de-estudiante">
-        <input type="text" id="nombre-del-estudiante" placeholder="Nombre del estudiante">
-        <input type="number" id="edad-del-estudiante" placeholder="Edad del estudiante">
-        <input type="text" id="nota-del-estudiante" placeholder="Notas del estudiante">
-        <button id="boton-para-agregar-estudiante">Agregar estudiante</button>
-    </div>
-</body>
+    <!-- <script src="./index.js"></script> -->
+    <script src="./app.js"></script>
+  </body>
 </html>
